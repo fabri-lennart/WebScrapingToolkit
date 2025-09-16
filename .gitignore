@@ -1,0 +1,17 @@
+# Ignorar archivos y carpetas del sistema MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Iconos y metadatos
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+
+# Carpetas específicas del sistema
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
