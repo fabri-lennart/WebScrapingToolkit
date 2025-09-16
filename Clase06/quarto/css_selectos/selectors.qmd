@@ -1,0 +1,34 @@
+---
+title: "CSS Selector y Cuando Usarlos"
+author: "Fabricio Lennart"
+date: "2025-09-16"
+format:
+  html:
+    theme: darkly
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Mostrar código"
+jupyter: python3
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# El css sirve para  aplicar estilos a nuestra web
+En este ejemplo haremos uso de esta pagina web: https://plzscrape.com/basic/css-selectors
+```{python}
+# librerias necesarias
+from bs4 import BeautifulSoup
+import requests as rq
+
+url = "https://webscraper.io/test-sites/e-commerce/allinone"
+respuesta = rq.get(url)
+
+with open("my_file.html", "w") as file:
+    file.write(respuesta.text)
+    print("archivo guardado")
+
+```

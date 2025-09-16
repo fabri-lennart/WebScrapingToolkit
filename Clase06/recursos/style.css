@@ -1,0 +1,9 @@
+/**  Explicacion de los selectores **/
+
+#caja-unica {
+    color: chartreuse;
+}   
+
+.destacado.importante {
+    color: red;
+}

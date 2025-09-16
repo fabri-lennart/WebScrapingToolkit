@@ -1,0 +1,44 @@
+---
+title: "Navegando La Web Con Xpaths"
+author: "Fabricio Lennart"
+date: "2025-09-16"
+format:
+  html:
+    theme: darkly
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Mostrar código"
+jupyter: python3
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Para esto es importante que conozcas que la estructura basica de un html
+
+---
+
+
+```{python}
+from lxml import html
+
+# Ruta relativa desde el archivo script o notebook
+path = "../recursos/index.html"
+
+# Abrir y cargar el contenido HTML
+with open(path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# Parsear el contenido HTML
+tree = html.fromstring(content)
+
+# Ejemplo de consulta XPath
+# Obtener el texto del título <title>
+titulo = tree.xpath('//h2/text()')
+
+print(titulo)
+
+```

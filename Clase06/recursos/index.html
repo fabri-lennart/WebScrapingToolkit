@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo Explicativo de Selectores CSS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Ejemplo de Selectores CSS para Web Scraping</h1>
+
+    <!-- Selector por etiqueta -->
+    <p>Este es un párrafo simple que se selecciona con "p".</p>
+
+    <!-- Selector por ID -->
+    <div id="caja-unica">
+        <p>Este párrafo está dentro de un div con id "caja-unica".</p>
+    </div>
+
+    <!-- Selector por clase -->
+    <div class="contenedor">
+        <p class="destacado">Texto con clase "destacado".</p>
+        <p class="destacado importante">Texto con doble clase "destacado" e "importante".</p>
+        <p class="importante">Texto solo con clase "importante".</p>
+    </div>
+
+    <!-- Selector descendiente (elemento dentro de otro) -->
+    <section class="productos">
+        <article class="producto">
+            <h2 class="nombre-producto">Producto 1</h2>
+            <p class="descripcion-producto">Descripción detallada del producto 1</p>
+            <p class="precio-producto">$12.99</p>
+            <a href="/compra1" class="boton comprar">Comprar</a>
+        </article>
+
+        <article class="producto">
+            <h2 class="nombre-producto">Producto 2</h2>
+            <p class="descripcion-producto">Descripción detallada del producto 2</p>
+            <p class="precio-producto">$15.50</p>
+            <a href="/compra2" class="boton comprar">Comprar</a>
+        </article>
+    </section>
+
+    <!-- Selector hijo directo -->
+    <div class="blog" id="blog-principal">
+        <article>
+            <h3>Artículo destacado</h3>
+            <p>Este artículo es hijo directo del div "#blog-principal".</p>
+            <div class="comentarios">
+                <p class="comentario">Comentario 1</p>
+                <p class="comentario">Comentario 2</p>
+            </div>
+        </article>
+        <article>
+            <h3>Otro artículo</h3>
+            <p>Contenido adicional.</p>
+        </article>
+    </div>
+
+    <!-- Selector de hermanos adyacentes -->
+    <div class="lista-items">
+        <p class="item">Elemento 1</p>
+        <p class="item siguiente">Elemento 2, hermano adyacente de elemento 1</p>
+        <p class="item">Elemento 3</p>
+    </div>
+
+    <!-- Selector por atributo -->
+    <nav>
+        <a href="https://facebook.com" target="_blank" class="red-social">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="red-social">Twitter</a>
+        <a href="https://instagram.com" target="_self" class="red-social">Instagram</a>
+    </nav>
+</body>
+</html>
+
+</html>
