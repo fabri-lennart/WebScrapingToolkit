@@ -1,0 +1,59 @@
+---
+title: "selenium automation"
+author: "Fabricio Lennart"
+date: "2025-10-18"
+format:
+  html:
+    theme: darkly
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    code-fold: true
+    code-summary: "Mostrar código"
+jupyter: python3
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Web drivers!
+
+Usando selenium automatizaremos el uso del navegador, para eso debemos de tener instalado un web driver.
+```{python}
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+
+# Ruta donde está tu chromedriver
+path = "/usr/bin/chromedriver"
+
+# Crear un objeto Service con la ruta del chromedriver
+service = Service(executable_path=path)
+
+# Inicializar el driver de Chrome pasando el service
+driver = webdriver.Chrome(service=service)
+
+# Ahora puedes usar driver para controlar el navegador
+driver.get("https://the-internet.herokuapp.com/login")
+time.sleep(1)
+
+# ingresamos los datos de usuario y password
+user = "tomsmith"
+password = "SuperSecretPassword!"
+
+# encontramos los elementos (corregir el uso de By.ID)
+driver.find_element(By.ID, "username").send_keys(user)
+driver.find_element(By.ID, "password").send_keys(password)
+
+# Localizamos el botón por su clase y hacemos click
+driver.find_element(By.CLASS_NAME, "radius").click()
+
+# esperar unos segundos para ver el resultado
+time.sleep(3)
+
+# cerramos el navegador
+driver.quit()
+
+```

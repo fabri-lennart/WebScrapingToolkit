@@ -20,15 +20,15 @@ execute:
 # El css sirve para  aplicar estilos a nuestra web
 En este ejemplo haremos uso de esta pagina web: https://plzscrape.com/basic/css-selectors
 ```{python}
-# librerias necesarias
 from bs4 import BeautifulSoup
 import requests as rq
 
 url = "https://webscraper.io/test-sites/e-commerce/allinone"
 respuesta = rq.get(url)
 
-with open("my_file.html", "w") as file:
-    file.write(respuesta.text)
-    print("archivo guardado")
+soup = BeautifulSoup(respuesta.text, "html.parser")
+css_selector = soup.select(".card-title")
+
+print(css_selector)
 
 ```
